@@ -2,18 +2,16 @@
 
 html,body{margin:0;background:transparent;overflow:hidden}
 .bbp-card,.bbp-card *{box-sizing:border-box}
-.bbp-card{--bbp-purple:#8d4dff;--bbp-violet:#c18cff;--bbp-pink:#ff79d1;--bbp-ink:#160b2b;position:relative;width:min(720px,96vw);min-height:210px;margin:0 auto;padding:26px 34px;overflow:hidden;border:2px solid rgba(193,140,255,.9);border-radius:28px;background:#241044;color:#fff;text-align:center;font-family:'Montserrat','Segoe UI',sans-serif;isolation:isolate;box-shadow:0 0 22px rgba(141,77,255,.7),0 0 70px rgba(92,34,180,.45),inset 0 0 36px rgba(193,140,255,.14);animation:bbp-card-in .7s cubic-bezier(.2,.85,.25,1.15) both,bbp-card-float 6s ease-in-out .7s infinite alternate}
-.bbp-bg{position:absolute;z-index:-4;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.48) saturate(1.25);transform:scale(1.04);animation:bbp-bg-drift 18s ease-in-out infinite alternate}
-.bbp-overlay{position:absolute;z-index:-3;top:0;left:0;width:100%;height:100%;background:linear-gradient(115deg,rgba(20,5,48,.9),rgba(70,22,128,.62) 48%,rgba(17,5,43,.9))}
-.bbp-glow{position:absolute;z-index:-2;top:-80px;left:8%;width:84%;height:130px;border-radius:50%;background:rgba(193,140,255,.28);filter:blur(38px);pointer-events:none;animation:bbp-glow 4s ease-in-out infinite}
-.bbp-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0}
+.bbp-card{--bbp-purple:#8d4dff;--bbp-violet:#c18cff;--bbp-pink:#ff79d1;--bbp-ink:#160b2b;position:relative;width:min(720px,96vw);min-height:210px;margin:10px auto 0;padding:26px 34px;overflow:hidden;border:2px solid rgba(193,140,255,.72);border-radius:28px;background:rgba(25,10,48,.34);color:#fff;text-align:center;font-family:'Montserrat','Segoe UI',sans-serif;isolation:isolate;box-shadow:0 0 0 1px rgba(193,140,255,.18),inset 0 0 24px rgba(193,140,255,.08);animation:bbp-card-in .7s cubic-bezier(.2,.85,.25,1.15) both,bbp-card-float 6s ease-in-out .7s infinite alternate}
+.bbp-bg{position:absolute;z-index:0;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(.68) saturate(.98);transform:scale(1.04);animation:bbp-bg-drift 18s ease-in-out infinite alternate}
+.bbp-overlay{position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;background:linear-gradient(115deg,rgba(20,5,48,.38),rgba(70,22,128,.22) 48%,rgba(17,5,43,.38))}
+.bbp-glow{position:absolute;z-index:2;top:-80px;left:8%;width:84%;height:130px;border-radius:50%;background:rgba(193,140,255,.12);filter:blur(38px);pointer-events:none;animation:bbp-glow 4s ease-in-out infinite}
+.bbp-content{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0}
 .bbp-title{font:800 clamp(17px,3vw,25px)/1.1 'Space Grotesk','Montserrat',sans-serif;letter-spacing:clamp(2px,1vw,5px);color:#fff;text-shadow:0 0 12px rgba(193,140,255,.9),0 2px 2px #160b2b;animation:bbp-title-pulse 2.8s ease-in-out infinite}
 .bbp-amount{margin-top:9px;color:#ffd36b;font:900 clamp(34px,7vw,66px)/.95 'Space Grotesk','Montserrat',sans-serif;letter-spacing:1px;text-shadow:0 0 10px rgba(255,211,107,.85),0 0 30px rgba(255,121,209,.45);animation:bbp-amount-in .7s .15s both}
 .bbp-from{color:#e8d9ff;font:600 13px/1 'Montserrat',sans-serif;letter-spacing:4px;text-transform:uppercase}
 .bbp-sender-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;max-width:100%}
 .bbp-sender{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff;font:800 clamp(22px,4vw,34px)/1.15 'Space Grotesk','Montserrat',sans-serif;text-shadow:0 0 15px rgba(193,140,255,.9)}
-.bbp-verified{display:none;padding:4px 8px;border:1px solid rgba(255,211,107,.8);border-radius:999px;color:#ffd36b;background:rgba(45,18,77,.8);font:700 10px/1 'Montserrat',sans-serif;letter-spacing:.5px}
-.bbp-card.is-verified .bbp-verified{display:inline-block}
 .bbp-message{width:min(100%,620px);margin-top:8px;color:#f7efff;font:600 clamp(15px,2.4vw,21px)/1.35 'Montserrat','Segoe UI',sans-serif;word-break:break-word;text-shadow:0 2px 5px #160b2b}
 .bbp-gif{display:none;max-width:min(180px,60vw);max-height:100px;margin-top:9px;border-radius:14px;border:1px solid rgba(193,140,255,.65);box-shadow:0 0 18px rgba(141,77,255,.55)}
 .bbp-gif.has-gif{display:block}
