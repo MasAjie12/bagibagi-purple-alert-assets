@@ -1,8 +1,6 @@
 (() => {
   const ready = () => {
     document.querySelectorAll('.bbp-card').forEach((card) => {
-      const verified = String(card.dataset.verified || '').toLowerCase();
-      if (verified === 'true' || verified === '1' || verified === 'yes') card.classList.add('is-verified');
       const gif = card.querySelector('.bbp-gif');
       if (gif) {
         const src = gif.getAttribute('src') || '';
